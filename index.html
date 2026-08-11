@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sahar — LinkedIn Personal Branding, Profile Optimization, Ghostwriting and Lead Generation.">
+<title>Sahar | LinkedIn Personal Branding & Lead Generation</title>
+
+<style>
+:root{
+  --red:#AE1E22;
+  --red2:#d02a30;
+  --black:#080612;
+  --card:#110d18;
+  --white:#fff;
+  --muted:#b8b2bd;
+  --line:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:var(--black);
+  color:var(--white);
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,6,18,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  min-height:72px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+}
+.logo{font-weight:900;font-size:22px;letter-spacing:-.5px}
+.logo span{color:var(--red)}
+.nav-links{display:flex;gap:25px;align-items:center}
+.nav-links a{font-size:14px;color:#ddd;transition:.2s}
+.nav-links a:hover{color:var(--red2)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 20px;border-radius:8px;
+  background:var(--red);color:#fff;font-weight:800;
+  border:1px solid var(--red);transition:.25s;
+}
+.btn:hover{transform:translateY(-2px);background:var(--red2)}
+.btn-outline{background:transparent;border-color:var(--red);color:#fff}
+.hero{padding:110px 0 90px;position:relative;overflow:hidden}
+.hero:before{
+  content:"";position:absolute;width:500px;height:500px;
+  right:-220px;top:-180px;border-radius:50%;
+  background:rgba(174,30,34,.13);filter:blur(10px)
+}
+.kicker{
+  display:inline-block;color:#fff;background:rgba(174,30,34,.14);
+  border:1px solid rgba(174,30,34,.45);padding:7px 12px;
+  border-radius:100px;font-size:12px;font-weight:800;
+  text-transform:uppercase;letter-spacing:1px;margin-bottom:22px
+}
+h1{
+  font-size:clamp(44px,7vw,82px);line-height:.98;
+  letter-spacing:-4px;max-width:900px;margin-bottom:25px
+}
+h1 span{color:var(--red)}
+.hero p{max-width:690px;color:var(--muted);font-size:19px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--line);margin-top:65px;
+  border:1px solid var(--line);border-radius:14px;overflow:hidden
+}
+.stat{background:rgba(255,255,255,.025);padding:25px}
+.stat strong{display:block;font-size:30px;color:var(--red2)}
+.stat span{color:var(--muted);font-size:13px}
+section{padding:95px 0}
+.section-head{margin-bottom:42px}
+.eyebrow{color:var(--red2);font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:12px}
+h2{font-size:clamp(34px,5vw,52px);line-height:1.05;letter-spacing:-2px;margin-top:9px}
+.section-head p{color:var(--muted);max-width:650px;margin-top:13px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.panel{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:18px;padding:32px
+}
+.panel p{color:var(--muted)}
+.services{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px
+}
+.service{
+  padding:26px;background:var(--card);border:1px solid var(--line);
+  border-radius:15px;transition:.25s
+}
+.service:hover{transform:translateY(-5px);border-color:rgba(174,30,34,.7)}
+.service .num{color:var(--red2);font-weight:900;font-size:13px}
+.service h3{margin:14px 0 8px;font-size:20px}
+.service p{font-size:14px;color:var(--muted)}
+.posts{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+}
+.post{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:16px;padding:24px;min-height:220px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:.25s
+}
+.post:hover{transform:translateY(-5px);border-color:rgba(174,30,34,.65)}
+.tag{color:var(--red2);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1px}
+.post h3{font-size:21px;line-height:1.2;margin:12px 0}
+.post p{font-size:14px;color:var(--muted)}
+.post a{margin-top:20px;color:#fff;font-weight:800;font-size:13px}
+.post a:hover{color:var(--red2)}
+.assets{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.asset{
+  min-height:300px;background:linear-gradient(145deg,#17111d,#0e0a14);
+  border:1px solid var(--line);border-radius:18px;padding:32px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  overflow:hidden;position:relative
+}
+.asset:after{
+  content:"";position:absolute;width:180px;height:180px;
+  right:-70px;bottom:-70px;border-radius:50%;
+  background:rgba(174,30,34,.2)
+}
+.asset-content{position:relative;z-index:2}
+.asset-label{font-size:12px;color:var(--red2);font-weight:900;text-transform:uppercase}
+.asset h3{font-size:32px;max-width:500px;margin:12px 0}
+.asset p{color:var(--muted);max-width:480px}
+.recs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quote{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:16px;padding:27px
+}
+.quote p{color:#ddd;font-size:15px}
+.quote strong{display:block;margin-top:20px;color:var(--red2)}
+.cta{
+  text-align:center;padding:75px 25px;border:1px solid rgba(174,30,34,.45);
+  border-radius:22px;background:linear-gradient(145deg,rgba(174,30,34,.13),rgba(255,255,255,.02))
+}
+.cta h2{max-width:720px;margin:8px auto 15px}
+.cta p{color:var(--muted);max-width:620px;margin:0 auto 25px}
+footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#fff}
+@media(max-width:900px){
+  .services{grid-template-columns:repeat(2,1fr)}
+  .posts,.recs{grid-template-columns:1fr 1fr}
+  .about-grid,.assets{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .nav-links{display:none}
+  .hero{padding:75px 0 60px}
+  h1{letter-spacing:-2px}
+  .stats{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .services,.posts,.recs{grid-template-columns:1fr}
+  .panel,.asset{padding:24px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home">S<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#posts">Featured Posts</a>
+      <a href="#proof">Proof</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="mailto:saharkanwal9891@gmail.com">Let's Connect</a>
+  </div>
+</nav>
+
+<main id="home">
+
+<section class="hero">
+  <div class="container">
+    <div class="kicker">LinkedIn Personal Branding • Lead Generation</div>
+    <h1>Turn your LinkedIn presence into <span>authority.</span></h1>
+    <p>
+      I help professionals build a stronger LinkedIn presence through
+      profile optimization, personal branding, content writing and
+      lead-generation strategy.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="mailto:saharkanwal9891@gmail.com">Work With Me</a>
+      <a class="btn btn-outline" href="#posts">See My Work</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><strong>7+</strong><span>Featured LinkedIn posts</span></div>
+      <div class="stat"><strong>3+</strong><span>Client recommendations</span></div>
+      <div class="stat"><strong>1:1</strong><span>Personal branding support</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">About</div>
+      <h2>Strategic LinkedIn presence, not random posting.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="panel">
+        <p>
+          LinkedIn is more than a place to post. Your profile, content,
+          positioning and conversations work together to build trust.
+          My approach focuses on making your profile clear, credible and
+          aligned with the people you want to reach.
+        </p>
+      </div>
+      <div class="panel">
+        <p>
+          My work combines personal branding, profile optimization,
+          ghostwriting, content strategy and lead generation so your
+          LinkedIn presence supports real professional opportunities.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What I Do</div>
+      <h2>Services</h2>
+      <p>Focused services for professionals who want their LinkedIn presence to work harder.</p>
+    </div>
+
+    <div class="services">
+      <div class="service">
+        <div class="num">01</div>
+        <h3>Profile Optimization</h3>
+        <p>Clear positioning across your headline, About section and profile messaging.</p>
+      </div>
+      <div class="service">
+        <div class="num">02</div>
+        <h3>Personal Branding</h3>
+        <p>Build a recognizable professional identity with consistent messaging and content.</p>
+      </div>
+      <div class="service">
+        <div class="num">03</div>
+        <h3>Ghostwriting</h3>
+        <p>Thoughtful LinkedIn posts written around your expertise, voice and audience.</p>
+      </div>
+      <div class="service">
+        <div class="num">04</div>
+        <h3>Lead Generation</h3>
+        <p>Strategic LinkedIn prospecting and positioning designed to start better conversations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="posts">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Selected Work</div>
+      <h2>Featured LinkedIn Posts</h2>
+      <p>Seven featured posts from the portfolio, with direct links to the original LinkedIn posts.</p>
+    </div>
+
+    <div class="posts">
+
+      <article class="post">
+        <div>
+          <div class="tag">Client Win</div>
+          <h3>My 3rd Client — Complete Profile Optimization</h3>
+          <p>A client-focused post highlighting a profile optimization result.</p>
+        </div>
+        <a target="_blank" href="https://www.linkedin.com/posts/saharkanwalleadgeneration_my-3rd-cliend-complet-profile-optimization-activity-7485629310939103232-XFpm">View post →</a>
+      </article>
+
+      <article class="post">
+        <div>
+          <div class="tag">Educational</div>
+          <h3>Your LinkedIn Profile Has a Score</h3>
+          <p>An educational post about evaluating and improving your LinkedIn profile.</p>
+        </div>
+        <a target="_blank" href="https://www.linkedin.com/posts/saharkanwalleadgeneration_your-linkedin-profile-has-a-score-do-you-activity-7474693371685470208-8Jh3">View post →</a>
+      </article>
+
+      <article class="post">
+        <div>
+          <div class="tag">Personal</div>
+          <h3>Three Flags Side by Side</h3>
+          <p>A personal LinkedIn post designed around identity and visual storytelling.</p>
+        </div>
+        <a target="_blank" href="https://www.linkedin.com/posts/saharkanwalleadgeneration_three-flags-side-by-side-pakistan-activity-7491846530950373376-QJE6">View post →</a>
+      </article>
+
+      <article class="post">
+        <div>
+          <div class="tag">Story</div>
+          <h3>A Personal Lead Generation Story</h3>
+          <p>A story-led piece connecting personal experience with lead generation.</p>
+        </div>
+        <a target="_blank" href="https://www.linkedin.com/posts/saharkanwalleadgeneration_story-personal-lead-activity-7490995080519139328-xwj0">View post →</a>
+      </article>
+
+      <article class="post">
+        <div>
+          <div class="tag">Mentorship</div>
+          <h3>99% of Teachers Teach Subjects</h3>
+          <p>A story about teaching, learning and the impact of the right mentor.</p>
+        </div>
+        <a target="_blank" href="https://www.linkedin.com/posts/saharkanwalleadgeneration_99-of-teachers-teach-subjects-saba-siraj-ugcPost-7483618577351204865-3c2c">View post →</a>
+      </article>
+
+      <article class="post">
+        <div>
+          <div class="tag">Milestone</div>
+          <h3>A Proud Moment for Our Family</h3>
+          <p>A personal milestone shared through a simple LinkedIn story.</p>
+        </div>
+        <a target="_blank" href="https://www.linkedin.com/posts/saharkanwalleadgeneration_a-proud-moment-for-our-family-alhamdulillah-activity-7488134171450695680-veWa">View post →</a>
+      </article>
+
+      <article class="post">
+        <div>
+          <div class="tag">Journey</div>
+          <h3>Grateful for the LinkedIn Journey</h3>
+          <p>A reflection on growth, new beginnings and the LinkedIn journey.</p>
+        </div>
+        <a target="_blank" href="https://www.linkedin.com/posts/saharkanwalleadgeneration_grateful-linkedinjourney-newbeginnings-ugcPost-7484908331371950080-fkys">View post →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Proof & Resources</div>
+      <h2>Credentials that support the work.</h2>
+    </div>
+
+    <div class="assets">
+      <div class="asset">
+        <div class="asset-content">
+          <div class="asset-label">Certificate</div>
+          <h3>GeeksforGeeks × Google</h3>
+          <p>
+            Build with AI Agent Builder Camp certificate included in the portfolio.
+            Replace the button below with your certificate image or file when you upload it to GitHub.
+          </p>
+        </div>
+        <div class="asset-content">
+          <a class="btn btn-outline" href="#" onclick="alert('Upload your certificate file to the GitHub repository and replace this # link.');return false;">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="asset">
+        <div class="asset-content">
+          <div class="asset-label">Lead Magnet</div>
+          <h3>AI Tools Mastery</h3>
+          <p>
+            A 13-page flipbook-style ebook created as a lead magnet.
+            Add your Heyzine URL to the button below.
+          </p>
+        </div>
+        <div class="asset-content">
+          <a class="btn" href="#" onclick="alert('Replace this # with your Heyzine book link.');return false;">Read the Book</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Recommendations</div>
+      <h2>What clients say.</h2>
+    </div>
+
+    <div class="recs">
+      <div class="quote">
+        <p>“Sahar helped turn a LinkedIn profile into a clearer professional presence with stronger positioning.”</p>
+        <strong>— Client Recommendation</strong>
+      </div>
+      <div class="quote">
+        <p>“The profile and content direction made the message much easier to understand and communicate.”</p>
+        <strong>— Client Recommendation</strong>
+      </div>
+      <div class="quote">
+        <p>“A focused approach to personal branding, content and LinkedIn visibility.”</p>
+        <strong>— Client Recommendation</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="cta">
+      <div class="eyebrow">Let's Work Together</div>
+      <h2>Ready to make your LinkedIn presence stronger?</h2>
+      <p>For profile optimization, personal branding, ghostwriting or lead-generation support, get in touch.</p>
+      <a class="btn" href="mailto:saharkanwal9891@gmail.com">saharkanwal9891@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Sahar. All rights reserved.</div>
+    <a href="mailto:saharkanwal9891@gmail.com">saharkanwal9891@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
